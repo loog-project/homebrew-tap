@@ -5,13 +5,13 @@
 class Loog < Formula
   desc "Kubernetes resource history viewer (TUI)"
   homepage "https://github.com/loog-project/loog"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/loog-project/loog/releases/download/v1.0.0/loog_1.0.0_macos_amd64.tar.gz"
-      sha256 "ccb99fda552441402fdc887e1984dcd2012ae8f56774eb463ae569a554cb5307"
+      url "https://github.com/loog-project/loog/releases/download/v1.1.0/loog_1.1.0_macos_amd64.tar.gz"
+      sha256 "4a1b973b34b31baa9604fb2fe1fb8529b077ac73effd006c96e6548bec580b0a"
 
       define_method(:install) do
         bin.install "loog"
@@ -19,8 +19,8 @@ class Loog < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/loog-project/loog/releases/download/v1.0.0/loog_1.0.0_macos_arm64.tar.gz"
-      sha256 "224dda9e414f7844975b5bdd9de06244b99c3cc4fe483cad44dc5fd4e4fe95da"
+      url "https://github.com/loog-project/loog/releases/download/v1.1.0/loog_1.1.0_macos_arm64.tar.gz"
+      sha256 "da496b70d8a982b0244b4a777c3a5ae684fe5e124038725d69f413f73fd42d22"
 
       define_method(:install) do
         bin.install "loog"
@@ -31,16 +31,16 @@ class Loog < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/loog-project/loog/releases/download/v1.0.0/loog_1.0.0_linux_amd64.tar.gz"
-      sha256 "31dec1b174698dd0313357d191627ec17cb68abc3a324c8ad8b24064c898db8b"
+      url "https://github.com/loog-project/loog/releases/download/v1.1.0/loog_1.1.0_linux_amd64.tar.gz"
+      sha256 "ad39de394d5c4fcdcbc5dfae8569d0c8de4b9ecde10d5cb8ac094f5764ea6e18"
       define_method(:install) do
         bin.install "loog"
         generate_completions_from_executable(bin/"loog", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/loog-project/loog/releases/download/v1.0.0/loog_1.0.0_linux_arm64.tar.gz"
-      sha256 "ca09fb9392d4ffb420e67a928bf27bfbf61ff7cd2edaab1e9fc2ac2af551a1dc"
+      url "https://github.com/loog-project/loog/releases/download/v1.1.0/loog_1.1.0_linux_arm64.tar.gz"
+      sha256 "bcaa59f4527ae6d1d59462695e79d12eaa766f1986fe5bd0b12ab867d908b5bb"
       define_method(:install) do
         bin.install "loog"
         generate_completions_from_executable(bin/"loog", "completion")
